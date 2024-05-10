@@ -1,0 +1,15 @@
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\UnidadRed.exe
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\UnidadRed.deps.json
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\UnidadRed.runtimeconfig.json
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\UnidadRed.dll
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\UnidadRed.pdb
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\UnidadRed.GeneratedMSBuildEditorConfig.editorconfig
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\UnidadRed.AssemblyInfoInputs.cache
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\UnidadRed.AssemblyInfo.cs
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\UnidadRed.csproj.CoreCompileInputs.cache
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\UnidadRed.sourcelink.json
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\UnidadRed.dll
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\refint\UnidadRed.dll
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\UnidadRed.pdb
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\UnidadRed.genruntimeconfig.cache
+C:\Allfiles-Net8\UnidadRed\obj\Release\net8.0-windows\ref\UnidadRed.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X3Vm5sVYJ9Fp6MIEPAcB7L8LqRPfecVzFZT/KV/vLeqakCmEhrfQ7gWra2soRW4tsYJmOzLdr+XS9BMtRgwx6g==",
+  "dgSpecHash": "rmHXihrKaa10Fmduev5ORg2D51yxXUJJ4etEBYcwdXZndSUEf0F6FlvIc0WuhGg964uATwEtjyoQK3qIPgct8Q==",
   "success": true,
-  "projectFilePath": "C:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj",
+  "projectFilePath": "c:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Blanko\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.3\\microsoft.net.illink.tasks.8.0.3.nupkg.sha512"
   ],

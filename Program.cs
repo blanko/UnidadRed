@@ -4,6 +4,7 @@ using System.Security.Cryptography; // Usado para: Aes, CryptoStream, ICryptoTra
 using Microsoft.Win32; // Usado para: RegistryKey
 using System.Text; // Usado para: Encoding
 using System.Text.Json; // Usado para: JsonSerializer
+using System.Runtime.InteropServices; // Usado para: StructLayout
 
 namespace UnidadRed;
 
@@ -23,7 +24,6 @@ class Program
         // Usar el directorio actual como predeterminado
         string exePath = Environment.GetCommandLineArgs()[0];
         string exeName = Path.GetFileName(exePath);
-
 
 
         Console.WriteLine("Ejecutando: " + exePath);
@@ -46,11 +46,24 @@ class Program
         string? configPath = Path.Combine(directory, "configuracion.config");
 
 
+        // Comprobación y actualización de configuración
+        if (args.Length >= 4)
+        {
+            Console.WriteLine("Preparando la configuracion");
+            // Actualizar configuración aquí
+            ActualizarConfiguracion(configPath, args[0], args[1], args[2], args[3]);
+        }
+
+
         // Leer y procesar el archivo .config
         if (File.Exists(configPath))
         {
             var config = LeerConfiguracion(configPath);
             // Montar unidad de red aquí usando 'config'
+            if (config != null)
+            {
+                ConectarUnidadRed(config.Unidad, config.Ruta, config.Usuario, config.Contraseña);
+            }
         }
         else
         {
@@ -58,11 +71,25 @@ class Program
             // Environment.Exit(1); // Termina el programa con un código de estado 1 para indicar un error
         }
 
-        // Comprobación y actualización de configuración
-        if (args.Length >= 4)
+    }
+
+    public static void ConectarUnidadRed(string unidad, string rutaRemota, string usuario, string contraseña)
+    {
+        NETRESOURCE netResource = new NETRESOURCE
         {
-            // Actualizar configuración aquí
-            ActualizarConfiguracion(configPath, args[0], args[1], args[2], args[3]);
+            lpLocalName = unidad,
+            lpRemoteName = rutaRemota
+        };
+
+        int result = WNetAddConnection2(netResource, contraseña, usuario, 0);
+
+        if (result != 0)
+        {
+            throw new InvalidOperationException("Error al conectar la unidad de red: " + result);
+        }
+        else
+        {
+            Console.WriteLine("Unidad de red conectada exitosamente.");
         }
     }
 
@@ -188,6 +215,25 @@ class Program
 
         return encrypted;
     }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public class NETRESOURCE
+    {
+        public int dwScope = 0;
+        public int dwType = RESOURCETYPE_DISK;
+        public int dwDisplayType = 0;
+        public int dwUsage = 0;
+        public string? lpLocalName;
+        public string? lpRemoteName;
+        public string? lpComment = null;
+        public string? lpProvider = null;
+    }
+
+    [DllImport("mpr.dll")]
+    public static extern int WNetAddConnection2(NETRESOURCE netResource,
+        string? password, string? username, int flags);
+
+    public const int RESOURCETYPE_DISK = 0x00000001;
 }
 
 class Configuracion

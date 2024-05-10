@@ -1,0 +1,5 @@
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\publish\UnidadRed.exe
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\publish\UnidadRed.dll
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\publish\UnidadRed.deps.json
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\publish\UnidadRed.runtimeconfig.json
+C:\Allfiles-Net8\UnidadRed\bin\Release\net8.0-windows\publish\UnidadRed.pdb

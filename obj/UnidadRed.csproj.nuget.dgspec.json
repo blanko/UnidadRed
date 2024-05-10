@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj": {}
+    "c:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj": {}
   },
   "projects": {
-    "C:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj": {
+    "c:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj",
+        "projectUniqueName": "c:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj",
         "projectName": "UnidadRed",
-        "projectPath": "C:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj",
+        "projectPath": "c:\\Allfiles-Net8\\UnidadRed\\UnidadRed.csproj",
         "packagesPath": "C:\\Users\\Blanko\\.nuget\\packages\\",
-        "outputPath": "C:\\Allfiles-Net8\\UnidadRed\\obj\\",
+        "outputPath": "c:\\Allfiles-Net8\\UnidadRed\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
