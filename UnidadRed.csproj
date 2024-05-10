@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework> <!-- [-windows], para especificar que es una aplicación pensada solo para windows, evito advertencias del compilador -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <DefineConstants>$(DefineConstants);WINDOWS</DefineConstants> <!-- Poder usar en el código #if WINDOWS -->
+    <!-- Inicio - Compilar en un solo ejecutable -->
+    <!-- Comprimido hace mas lento de abrir, todo incluido mas grande y lento de abrir, en un solo archivo mas grande y lento de abrir -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract> <!-- Net Core dentro -->
+    <PublishSingleFileCompression>true</PublishSingleFileCompression> <!-- Comprimido -->
+    <!-- Fin - Compilar en un solo ejecutable -->
+  </PropertyGroup>
+
+</Project>
